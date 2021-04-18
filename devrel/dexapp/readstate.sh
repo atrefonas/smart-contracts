@@ -14,11 +14,11 @@ WALLET=$1
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
 
-gcmd="/Users/jason/node/goal -d /Users/jason/node/data -w simplewebapp"
-
+#gcmd="/Users/jason/node/goal -d /Users/jason/node/data -w simplewebapp"
+gcmd="/node/goal"
 
 # Get one account from each node
-ACCOUNT='ZUJHYU5L3PJV2O7WJMNRI44H5RYFKP4GVVWM2OQASAIG7K6FXEL526VSOY'
-${gcmd} app read --app-id 12867764 --guess-format --local --from $ACCOUNT
-ACCOUNT2='A2PZYJLHZFM7XSNCRUXNZ2YGGHVAHYYQVIA5RE2KTJAHK7VKCQKKPHNX6A'
-${gcmd} app read --app-id 12867764 --guess-format --local --from $ACCOUNT2
+ACCOUNT='WYWRYK42XADLY3O62N52BOLT27DMPRA3WNBT2OBRT65N6OEZQWD4OSH6PI'
+${gcmd} app read --app-id 15369903 --guess-format --local --from $ACCOUNT
+ACCOUNT2='UUEUTRNQY7RUXESXRDO7HSYRSJJSSVKYVB4DI7X2HVVDWYOBWJOP5OSM3A'
+${gcmd} app read --app-id 15369903 --guess-format --local --from $ACCOUNT2

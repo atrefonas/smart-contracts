@@ -4,21 +4,21 @@
     //const atoken = "f1dee49e36a82face92fdb21cd3d340a1b369925cd12f3ee7371378f1665b9b1";
     //const aserver = "http://127.0.0.1";
     //const aport = 8080;
-    const atoken = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
-    const aserver = "http://localhost";
-    const aport = 4001;
+    const atoken = ""; //"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+    const aserver = "https://testnet.algoexplorerapi.io";
+    const aport = ""//4001;
 
     //const indexer_server = "https://indexer-internal-testnet.aws.algodev.network";
     //const indexer_port = 443;
     //const indexer_token = "YddOUGbAjHLr1uPZtZwHOvMDmXvR1Zvw1f3Roj2PT1ufenXbNyIxIz0IeznrLbDsF";
     const indexer_token = "";
-    const indexer_server = "http://localhost";
-    const indexer_port = 8980;
+    const indexer_server = "https://testnet.algoexplorerapi.io/idx2";
+    const indexer_port = ""//8980;
 
     //assetid is hard coded at the moment
-    let ASSETID = 3;
+    let ASSETID = 15322902;
     // This is the APPID returned after creating the stateful smart contract
-    let APPID = 5; //also change in contract code below
+    let APPID = 15369903; //also change in contract code below
 
     // Instantiate the indexer and algod client wrappers
     let indexerClient = new algosdk.Indexer(indexer_token, indexer_server, indexer_port);
@@ -51,12 +51,12 @@
     // Using hard coded accounts. These should be changed to work with algosigner
     // or your own key management system.
 
-    //ZUJHYU5L3PJV2O7WJMNRI44H5RYFKP4GVVWM2OQASAIG7K6FXEL526VSOY
-    let mn1 = "distance inmate vacuum ship foil park quarter stem bench gravity like track shiver point unable earn session choose cash penalty blur depend empower about glass";
+    //WYWRYK42XADLY3O62N52BOLT27DMPRA3WNBT2OBRT65N6OEZQWD4OSH6PI
+    let mn1 = "mass army warrior number blush distance enroll vivid horse become spend asthma hat desert amazing room asset ivory lucky ridge now deputy erase absorb above";
     let openAccount = algosdk.mnemonicToSecretKey(mn1);
 
-    //A2PZYJLHZFM7XSNCRUXNZ2YGGHVAHYYQVIA5RE2KTJAHK7VKCQKKPHNX6A
-    let mn2 = "shadow slush resemble juice wall review alert into celery spoon ice tube such tone neither swim chef reward sweet toe lunar bright clap absorb swim";
+    //UUEUTRNQY7RUXESXRDO7HSYRSJJSSVKYVB4DI7X2HVVDWYOBWJOP5OSM3A
+    let mn2 = "three satisfy build purse lens another idle fashion base equal echo recall proof hill shadow coach early palm act wealth dawn menu portion above mystery";
     let executeAccount = algosdk.mnemonicToSecretKey(mn2);
 
 
@@ -68,7 +68,7 @@
         fdata.append("lsig", fn);
         fdata.append("operation", "execute")
 
-        fetch('http://localhost:8888/server.php', {
+        fetch('http://127.0.0.1/jdex/server.php', {
                 method: 'POST',
                 body: fdata
             })
@@ -627,7 +627,7 @@ return
             let min = vlsa[4];
             let assetid = vlsa[5];
             body.classList.add("waiting");
-            promise = getBase64('http://localhost:8888/upload/' + fn);
+            promise = getBase64('http://127.0.0.1/jdex/upload/' + fn);
             promise.then(function(result) {
                 console.log(result);
                 bdecode = _base64ToArrayBuffer(result);
@@ -699,7 +699,7 @@ return
                 fdata.append("data", b64encoded);
                 fdata.append("lsig", fn);
                 fdata.append("operation", "upload")
-                fetch('http://localhost:8888/server.php', {
+                fetch('http://127.0.0.1/jdex/server.php', {
                         method: 'POST',
                         body: fdata
                     })

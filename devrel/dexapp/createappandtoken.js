@@ -4,14 +4,19 @@ const algosdk = require('algosdk');
 
 //fund the two accounts below before creating
 //ZUJHYU5L3PJV2O7WJMNRI44H5RYFKP4GVVWM2OQASAIG7K6FXEL526VSOY
-const creatorMnemonic = "distance inmate vacuum ship foil park quarter stem bench gravity like track shiver point unable earn session choose cash penalty blur depend empower about glass";
+const creatorMnemonic = "mass army warrior number blush distance enroll vivid horse become spend asthma hat desert amazing room asset ivory lucky ridge now deputy erase absorb above";
 //A2PZYJLHZFM7XSNCRUXNZ2YGGHVAHYYQVIA5RE2KTJAHK7VKCQKKPHNX6A
-const userMnemonic = "shadow slush resemble juice wall review alert into celery spoon ice tube such tone neither swim chef reward sweet toe lunar bright clap absorb swim";
+const userMnemonic = "three satisfy build purse lens another idle fashion base equal echo recall proof hill shadow coach early palm act wealth dawn menu portion above mystery";
 
 // user declared algod connection parameters
-const algodServer = "http://localhost";
-const algodToken = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
-const algodPort = 4001;
+//const algodServer = "http://localhost";
+//const algodToken = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+//const algodPort = 4001;
+const algodServer = "https://testnet.algoexplorerapi.io";
+const algodToken = "";
+const algodPort = "";
+
+
 // declare application state storage (immutable)
 localInts = 16;
 localBytes = 0;
